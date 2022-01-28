@@ -1,0 +1,17 @@
+{% extends 'base.html'%} {% block head %}
+<title>Task Master</title>
+{% endblock %} {% block body %}
+<div class="content" style="text-align: center">
+  <h1>Task Master</h1>
+
+  <h2>Do you really want to delete this task?</h2>
+
+  <h4>{{task.content}}</h4>
+
+  <form action="/delete/{{task.id}}" method="POST" style="padding-bottom: 2px">
+    <button type="submit">Yes</button>
+  </form>
+
+  <a href="/"> <button>No</button></a>
+</div>
+{% endblock %}
